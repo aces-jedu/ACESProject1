@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/ACES.Plugins/">
+    <Project Path="ACES.Plugins.InMemory/ACES.Plugins.InMemory.csproj" Id="a9564275-b78b-48bf-a8d6-010ccb3f9321" />
+  </Folder>
+  <Project Path="ACES.CoreBusiness/ACES.CoreBusiness.csproj" Id="d4925f9e-ff78-4dbc-9fcc-37e0ceeb02d2" />
+  <Project Path="ACES.UseCases/ACES.UseCases.csproj" Id="2e88a874-8adf-408b-bf65-46617d2aed4e" />
+  <Project Path="ACESProject1/ACESProject1.csproj" />
+</Solution>
