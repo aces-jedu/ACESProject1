@@ -3,7 +3,7 @@ using ACES.UseCases.PluginInterfaces;
 
 namespace ACES.Plugins.InMemory
 {
-    public class InvRepositories : IInvReporsitories
+    public class InvRepositories : IInvRepositories
     {
         private List<Inventory> _inventories;
         public InvRepositories()
