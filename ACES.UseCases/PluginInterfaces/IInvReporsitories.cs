@@ -7,6 +7,7 @@ namespace ACES.UseCases.PluginInterfaces
 {
     public interface IInvRepositories
     {
+        Task AddInvAsync(Inventory inventory);
         Task <IEnumerable<Inventory>>GetInvbyNameAsync(string name);
     }
 }

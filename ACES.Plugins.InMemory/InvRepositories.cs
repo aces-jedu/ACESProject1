@@ -15,6 +15,20 @@ namespace ACES.Plugins.InMemory
                 new Inventory { InvId = 1, InvName = "CPU", Quantity = 30, Price = 10 },
             };
         }
+
+        public Task AddInvAsync(Inventory inventory)
+        {
+            if (_inventories.Any(x => x.InvName.Equals(inventory.InvName, StringComparison.OrdinalIgnoreCase)))
+            { return Task.CompletedTask; }
+
+            var MaxId = _inventories.Max(x => x.InvId);
+            inventory.InvId = MaxId + 1;
+
+            _inventories.Add(inventory);
+
+            return Task.CompletedTask;
+        }
+
         public async Task<IEnumerable<Inventory>> GetInvbyNameAsync(string name)
         {
             if (string.IsNullOrEmpty(name)) return await Task.FromResult(_inventories);

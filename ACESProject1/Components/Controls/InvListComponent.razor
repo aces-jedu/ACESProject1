@@ -11,6 +11,12 @@
     </thead>
     <tbody>
         @if (inventories is not null && inventories.Count > 0)
+        {
+            foreach (var inv in inventories)
+            {
+                <InvListItemComponent Inv="inv"></InvListItemComponent>
+            }
+        }
 
             foreach (var inv in inventories)
             {

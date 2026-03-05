@@ -1,4 +1,5 @@
 ﻿@page "/InventoryList"
+@using ACESProject1.Components.Controls
 
 @inject IViewInvbyNameUseCase ViewInvbyNameUseCase
 
@@ -9,6 +10,11 @@
 <br />
 <br />
 
+<InvListComponent></InvListComponent>
+
+<br />
+
+<a href="/addInvItem" class="btn btn-primary"> Add Item </a>
 <InvListComponent> </InvListComponent>
 
 @code {

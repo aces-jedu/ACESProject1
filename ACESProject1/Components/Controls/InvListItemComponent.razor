@@ -1,3 +1,9 @@
+﻿@if (this.Inv is not null)
+{
+    <tr>
+        <td>@Inv.InvName</td>
+        <td>@Inv.Quantity</td>
+        <td>@Inv.Price.ToString("c")</td>
 ﻿@if (this.inventory is not null)
 {
     <tr>
@@ -9,6 +15,10 @@
         </td>
     </tr>
 }
+@code {
+
+    [Parameter]
+    public Inventory? Inv { get; set; }
 
 @code {
 
