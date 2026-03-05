@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ACES.UseCases.PluginInterfaces
 {
-    public interface IInvReporsitories
+    public interface IInvRepositories
     {
         Task AddInvAsync(Inventory inventory);
         Task <IEnumerable<Inventory>>GetInvbyNameAsync(string name);

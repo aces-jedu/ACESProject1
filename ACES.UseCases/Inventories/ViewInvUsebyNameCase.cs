@@ -9,16 +9,16 @@ namespace ACES.UseCases.Inventories
 {
     public class ViewInvbyNameUseCase : IViewInvbyNameUseCase
     {
-        private readonly IInvReporsitories invReporsitories;
+        private readonly IInvRepositories invRepositories;
 
-        public ViewInvbyNameUseCase(IInvReporsitories invReporsitories)
+        public ViewInvbyNameUseCase(IInvRepositories invRepositories)
         {
-            this.invReporsitories = invReporsitories;
+            this.invRepositories = invRepositories;
         }
 
         public async Task<IEnumerable<Inventory>> ExecuteAsync(string name = "")
         {
-            return await invReporsitories.GetInvbyNameAsync(name);
+            return await invRepositories.GetInvbyNameAsync(name);
         }
     }
 }

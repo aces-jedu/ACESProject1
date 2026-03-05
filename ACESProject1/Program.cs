@@ -16,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<UserStatus>();
 
 // Added Inventory List
-builder.Services.AddSingleton<IInvReporsitories, InvRepositories>();
+builder.Services.AddSingleton<IInvRepositories, InvRepositories>();
 builder.Services.AddTransient<IViewInvbyNameUseCase, ViewInvbyNameUseCase>();
 builder.Services.AddTransient<IAddInvUseCase, AddInvUseCase>();
 

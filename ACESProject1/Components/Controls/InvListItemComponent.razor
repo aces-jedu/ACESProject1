@@ -4,6 +4,12 @@
         <td>@Inv.InvName</td>
         <td>@Inv.Quantity</td>
         <td>@Inv.Price.ToString("c")</td>
+﻿@if (this.inventory is not null)
+{
+    <tr>
+        <td>@inventory.InvName</td>
+        <td>@inventory.Quantity</td>
+        <td>@inventory.Price.ToString("c")</td>
         <td>
             <button type="button" class="btn btn-primary"> Edit </button>
         </td>
@@ -13,5 +19,10 @@
 
     [Parameter]
     public Inventory? Inv { get; set; }
+
+@code {
+
+    [Parameter]
+    public Inventory? inventory { get; set; }
 
 }
