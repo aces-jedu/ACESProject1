@@ -18,6 +18,7 @@ builder.Services.AddScoped<UserStatus>();
 // Added Inventory List
 builder.Services.AddSingleton<IInvReporsitories, InvRepositories>();
 builder.Services.AddTransient<IViewInvbyNameUseCase, ViewInvbyNameUseCase>();
+builder.Services.AddTransient<IAddInvUseCase, AddInvUseCase>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

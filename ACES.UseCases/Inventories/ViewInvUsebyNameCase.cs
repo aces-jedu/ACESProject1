@@ -9,9 +9,9 @@ namespace ACES.UseCases.Inventories
 {
     public class ViewInvbyNameUseCase : IViewInvbyNameUseCase
     {
-        private readonly IInvReporsitories invReporsitories;
+        private readonly IInvRepositories invReporsitories;
 
-        public ViewInvbyNameUseCase(IInvReporsitories invReporsitories)
+        public ViewInvbyNameUseCase(IInvRepositories invReporsitories)
         {
             this.invReporsitories = invReporsitories;
         }
