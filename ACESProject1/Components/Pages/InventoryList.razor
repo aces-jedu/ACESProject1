@@ -1,22 +1,20 @@
 ﻿@page "/InventoryList"
+@using ACESProject1.Components.Controls
 
 @inject IViewInvbyNameUseCase ViewInvbyNameUseCase
 
 <PageTitle>Inventory List</PageTitle>
 
+<h3>Inventory List</h3>
+
 <br />
 <br />
 
-<ul>
-@if (inventories is not null && inventories.Count > 0)
+<InvListComponent></InvListComponent>
 
-    foreach(var inv in inventories)
-    {
-        <li>
-            @inv.InvName
-        </li>
-    }
-</ul>
+<br />
+
+<a href="/addInvItem" class="btn btn-primary"> Add Item </a>
 
 @code {
     private List<Inventory>? inventories;
